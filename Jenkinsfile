@@ -46,13 +46,12 @@ pipeline {
         stage('Show App URL') {
             steps {
                 script {
-                def serverIP = sh(returnStdout: true, script: "hostname -I | awk '{print $1}'").trim()
+                    def serverIP = sh(returnStdout: true, script: "hostname -I | awk '{print \$1}'").trim()
                     echo "======================================="
                     echo " 🚀 Your app is running at: http://${serverIP}:5050"
                     echo "======================================="
+                }
+            }
         }
-    }
-}
-
     }
 }
