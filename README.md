@@ -1,65 +1,85 @@
-Static Website - CI/CD Demo
+![jenkinautomation](https://github.com/user-attachments/assets/9693d0db-8b28-4c88-88e6-1a9ae225d690)
 
-This is a simple static website built with HTML and CSS.
-The project is used to demonstrate an Automated CI/CD Pipeline using:
+# 📽️ Jenkins Automation Project
 
-Jenkins for continuous integration and delivery
+This project demonstrates an **Automated CI/CD Pipeline** using the following tools:
 
-GitHub for version control
+ - **Jenkins** for continuous integration and delivery.
+ - **GitHub** for version control.
+ - **Docker** for containerization.
 
-Docker for containerization
+---
 
-🚀 Project Overview
+### 🚀 Project Overview
 
-A static HTML + CSS website
+ - A static HTML + CSS website
+ - Dockerized for easy deployment
+ - Integrated with Jenkins for automated build and deployment
 
-Dockerized for easy deployment
+---
 
-Integrated with Jenkins for automated build and deployment
-
-📂 Project Structure
-ci-cd-demo/
+### 📂 Project Structure
+```
+ProjectFolder/
 │── index.html
 │── styles.css
 │── Dockerfile
+│── Jenkinsfile
 │── README.md
+```
+---
 
-⚙️ CI/CD Pipeline Flow
+### 🛠️ Tools & Technologies
 
-Developer pushes code to GitHub
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)](https://www.jenkins.io/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
-Jenkins automatically pulls the latest code
+---
 
-Jenkins builds a Docker image of the website
+## ⚙️ Workflow
+1. Developer pushes code (HTML, CSS, Dockerfile, Jenkinsfile) to GitHub.
+2. GitHub webhook notifies Jenkins of the new changes.
+3. Jenkins pipeline executes:
+   - Clones the repository.
+   - Builds a Docker image using the `Dockerfile`.
+   - Stops the old container (if running).
+   - Runs a new Docker container serving the updated site.
 
-Docker container is deployed and served
+---
 
-🛠️ Tools & Technologies
+### 🚀 Features
 
-HTML, CSS
+ - Fully automated CI/CD pipeline.
+ - Continuous deployment via GitHub webhooks.
+ - Lightweight containerized environment using Nginx.
+ -Easy to replicate on any Linux environment.
 
-GitHub
+---
 
-Jenkins
+### 📖 Learning Outcome
 
-Docker
+ - Hands-on with Jenkins pipelines (Jenkinsfile).
+ - Integration of GitHub webhooks with Jenkins.
+ - Building and deploying Dockerized applications.
+ - Understanding of CI/CD workflow for DevOps projects.
 
-📌 How to Run Locally
+---
 
-Clone the repo:
+<p align="center">
+  <i>"Automate all the things." – DevOps Mantra </i>
+</p>
 
-git clone https://github.com/your-username/ci-cd-demo.git
-cd ci-cd-demo
+<p align="center">
+  <i>"If you automate a mess, you get an automated mess." – Rod Michael</i>
+</p>
 
+<p align="center">
+ ⚙️ Automated with Jenkins • 🚢 Deployed with Docker • 🖥️ Powered by GitHub Webhooks
+</p>
 
-Build Docker image:
-
-docker build -t static-website .
-
-
-Run the container:
-
-docker run -d -p 8080:80 static-website
 
 
 
